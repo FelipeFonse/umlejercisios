@@ -26,10 +26,14 @@ public class Salud extends Empleado {
     }
 
     @Override
-    public String toString() {
-        return "Salud{" +
-                "tieneEps=" + tieneEps +
-                ", nombreEps='" + nombreEps + '\'' +
-                '}';
+    public void mostrarInfo() {
+        super.mostrarInfo(); // muestra los datos del padre
+        System.out.println("=== Salud ===");
+        if (tieneEps) {
+            System.out.println("Tiene EPS  : Sí");
+            System.out.println("EPS        : " + nombreEps);
+        } else {
+            System.out.println("Tiene EPS  : No");
+        }
     }
 }
