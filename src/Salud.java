@@ -1,4 +1,4 @@
-public class Salud extends Empleado {
+public class Salud extends Empleado implements  Asegura {
     private boolean tieneEps;
     private String  nombreEps;
 
@@ -25,15 +25,34 @@ public class Salud extends Empleado {
         this.nombreEps = nombreEps;
     }
 
+
+
+    @Override
+    public void verificarEps () {
+        if (tieneEps) {
+        System.out.println(   getNombre() + " Si tiene EPS");
+        System.out.println("EPS : " + nombreEps);
+    } else {
+        System.out.println("No tiene eps");
+    }
+
+
+    }
+
+    @Override
+    public void mostrarCompaniaEps() {
+        if (tieneEps) {
+            System.out.println("Compañía EPS: " + nombreEps);
+        } else {
+            System.out.println("No aplica, no tiene EPS.");
+        }
+    }
+
     @Override
     public void mostrarInfo() {
-        super.mostrarInfo(); // muestra los datos del padre
-        System.out.println("=== Salud ===");
-        if (tieneEps) {
-            System.out.println("Tiene EPS  : Sí");
-            System.out.println("EPS        : " + nombreEps);
-        } else {
-            System.out.println("Tiene EPS  : No");
-        }
+        super.mostrarInfo();
+        System.out.println("    SALUD   ");
+        verificarEps();
+        mostrarCompaniaEps();
     }
 }
