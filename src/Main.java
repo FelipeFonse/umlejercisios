@@ -1,19 +1,10 @@
 import java.util.*;
 public class Main {
-    Scanner sc = new Scanner(System.in);
-    public static void main(String[] args) {
-        Scanner teclado= new Scanner(System.in);
+    Salud emp1 = new Salud("Carlos Pérez",    "1234567", 30, true,  "Compensar");
+    Salud emp2 = new Salud("Laura Gómez",     "7654321", 25, true,  "Salud Total");
+    Salud emp3 = new Salud("Andrés Torres",   "9876543", 40, true,  "Cruz Blanca");
+    Salud emp4 = new Salud("María Rodríguez", "1122334", 35, false, "");
 
-        System.out.println(" ingrese su nombre");
-         String nombre=teclado.nextLine();
-        System.out.println(" ingrese su  Empresa");
-        String emPresa= teclado.nextLine();
-        Empresa empresa = new Empresa(emPresa);
-        Empleado empleado = new Empleado(nombre, empresa);
 
-        System.out.println( empleado.precentarce());
-
-        teclado.close();
-    }
 }
 
