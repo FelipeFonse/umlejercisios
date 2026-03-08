@@ -1,4 +1,6 @@
 public class Salud extends Empleado implements  Asegura {
+    /* implements es  llamda  a la interfaz que obliga la clase a  usar los atributos de asegura
+    */
     private boolean tieneEps;
     private String  nombreEps;
 
