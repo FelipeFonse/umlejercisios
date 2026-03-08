@@ -1,5 +1,5 @@
 public class Empleado {
-    String nom;
+    String nom; // como son  variables compartidas no se private
     Empresa empresa;
 
     public Empleado(String nom, Empresa empresa) {
@@ -7,7 +7,7 @@ public class Empleado {
         this.empresa = empresa;
     }
 public  String precentarce() {
-    return "soy " + this.nom + " y trabajo en " + this.empresa.nom;
+    return "soy " + this.nom + " y trabajo en " + this.empresa.nom;// gurda en las dos clases
    }
 
 }
