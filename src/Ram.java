@@ -1,12 +1,12 @@
 public class Ram {
-    private int capacidad; // GB
+    private int capacidadRam; // GB
 
     public Ram(int capacidad) {
-        this.capacidad = capacidad;
+        this.capacidadRam = capacidad;
     }
 
-    public String getInfo() {
-        return "RAM: " + capacidad + " GB";
+    public String Info() {
+        return "RAM: " + capacidadRam + " GB";
     }
 }
 

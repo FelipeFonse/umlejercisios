@@ -1,14 +1,14 @@
 public class Cpu {
-    private String marca;
+    private String marcaCpu;
     private double velocidad; // GHz
 
     public Cpu(String marca, double velocidad) {
-        this.marca     = marca;
+        this.marcaCpu     = marca;
         this.velocidad = velocidad;
     }
 
-    public String getInfo() {
-        return "CPU: " + marca + " - " + velocidad + " GHz";
+    public String Info() {
+        return "CPU: " + marcaCpu + " - " + velocidad + " GHz";
     }
 }
 

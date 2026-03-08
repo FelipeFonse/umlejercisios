@@ -1,20 +1,17 @@
 import java.util.*;
-
-public class Main {
+public  class Main {
     public static void main(String[] args) {
 
-        Salud emp1 = new Salud("Carlos Pérez", "1234567", 30, true, "Compensar");
-        Salud emp2 = new Salud("Laura Gómez", "7654321", 25, true, "Salud Total");
-        Salud emp3 = new Salud("Andrés Torres", "9876543", 40, true, "Cruz Blanca");
-        Salud emp4 = new Salud("María Rodríguez", "1122334", 35, false, "");
+        // Las partes (CPU, RAM, Disco) se crean DENTRO del Computador
+        // No existen por fuera de él  →  eso es COMPOSICIÓN
+        Pc pc1 = new Pc("Dell",    "Intel i7", 3.8, 16, 512, "SSD");
+        Pc pc2 = new Pc("HP",      "AMD Ryzen", 3.2, 8, 1000, "HDD");
+        Pc pc3 = new Pc("Lenovo",  "Intel i5", 2.9, 32, 256, "SSD");
 
+        pc1.mostrarEspecificaciones();
         System.out.println();
-        emp1.mostrarInfo();
+        pc2.mostrarEspecificaciones();
         System.out.println();
-        emp2.mostrarInfo();
-        System.out.println();
-        emp3.mostrarInfo();
-        System.out.println();
-        emp4.mostrarInfo();
+        pc3.mostrarEspecificaciones();
     }
 }
