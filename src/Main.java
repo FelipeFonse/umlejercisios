@@ -1,17 +1,21 @@
 import java.util.*;
-public  class Main {
+public class Main {
     public static void main(String[] args) {
 
-        // Las partes (CPU, RAM, Disco) se crean DENTRO del Computador
-        // No existen por fuera de él  →  eso es COMPOSICIÓN
-        Pc pc1 = new Pc("Dell",    "Intel i7", 3.8, 16, 512, "SSD");
-        Pc pc2 = new Pc("HP",      "AMD Ryzen", 3.2, 8, 1000, "HDD");
-        Pc pc3 = new Pc("Lenovo",  "Intel i5", 2.9, 32, 256, "SSD");
+        // Jugadores se crean FUERA del equipo  → eso es AGREGACIÓN
+        Jugador j1 = new Jugador("Carlos",  10);
+        Jugador j2 = new Jugador("Andrés",  7);
+        Jugador j3 = new Jugador("Miguel",  1);
 
-        pc1.mostrarEspecificaciones();
+        // Se pasan al equipo desde afuera
+        Equipo equipo = new Equipo("Los Tigres", j1, j2, j3);
+        equipo.mostrarEquipo();
+
         System.out.println();
-        pc2.mostrarEspecificaciones();
-        System.out.println();
-        pc3.mostrarEspecificaciones();
-    }
-}
+
+        // Los jugadores siguen existiendo sin el equipo
+        System.out.println("Jugadores sin equipo:");
+        System.out.println(j1.getInfo());
+        System.out.println(j2.getInfo());
+        System.out.println(j3.getInfo());
+
