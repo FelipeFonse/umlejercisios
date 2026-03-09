@@ -1,8 +1,8 @@
 public class Equipo {
     private String   nombre;
-    private Jugador  jugador1;  // ◇ agregación
-    private Jugador  jugador2;  // ◇ agregación
-    private Jugador  jugador3;  // ◇ agregación
+    private Jugador  jugador1;  //  agregación se crea directo  en clase  Equipo
+    private Jugador  jugador2;
+    private Jugador  jugador3;
 
     // Los jugadores se crean FUERA y se pasan al equipo
     // Si el equipo desaparece, los jugadores siguen existiendo
